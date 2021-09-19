@@ -1,10 +1,10 @@
-import React, {Component} from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import ImageGalleryItem from "../ImageGalleryItem/ImageGalleryItem";
 
-export default class ImageGallery extends Component  {
-  render() {
-    const { gallery, onClick } = this.props
+export default function ImageGallery({gallery, onClick}) {
+  // render() {
+    // const { gallery, onClick } = this.props
     
       return (
         <ul className="ImageGallery">
@@ -19,7 +19,7 @@ export default class ImageGallery extends Component  {
           ))}
         </ul>
       );
-    }
+    // }
   }
 
 

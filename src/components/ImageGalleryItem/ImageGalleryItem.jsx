@@ -1,23 +1,23 @@
-import React, { Component } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 
-export default class ImageGalleryItem extends Component {
-  onClick = (e) => {
-    this.props.onClick(this.props.largeImageURL);
+export default function ImageGalleryItem({largeImageURL, onClick, webformatURL})  {
+  const handleOnClick = (e) => {
+    onClick(largeImageURL);
   };
-  render() {
+  // render() {
     return (
       <li className="ImageGalleryItem">
         <img
-          onClick={this.onClick}
-          src={this.props.webformatURL}
+          onClick={handleOnClick}
+          src={webformatURL}
           alt=""
           className="ImageGalleryItem-image"
         />
       </li>
     );
   }
-}
+// }
 
 ImageGalleryItem.propTypes = {
   largeImageURL: PropTypes.string.isRequired,
